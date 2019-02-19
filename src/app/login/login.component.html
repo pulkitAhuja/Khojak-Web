@@ -1,0 +1,24 @@
+<div class="form-gr">
+    <img src="assets/green-energy.png" alt="logo">
+      <div *ngIf="signup">
+        <div class="inputs">
+          <!-- <input [(ngModel)]="reg.email" placeholder="Email"> -->
+          <input [(ngModel)]="reg1.username" placeholder="Username">
+          <input [(ngModel)]="reg1.password" type="password" name="password" placeholder="Password">
+          <p style="color:red;">{{display}}</p>
+        </div>
+        <button type="submit" (click)="LoginFunct()">Login</button>
+        <hr>
+        <p>OR</p>
+        <button class="signup" (click)="signup=!signup">Sign Up ?</button>
+
+      </div>
+      
+      <div *ngIf="!signup">
+        <input [(ngModel)]="reg.email" placeholder="Set Email">
+        <input [(ngModel)]="reg.password" type="password" placeholder="Set Password">
+        <input [(ngModel)]="reg.username" placeholder="Set Username">
+        <p style="color:red;">{{warning}}</p>
+        <button type="submit" (click)= "RegisterFunct()">Sign Up</button>
+      </div>
+</div>

@@ -1,0 +1,26 @@
+[
+    {"id":1,
+      "plate":"DL 3D 6069",
+       "source": "Saket",
+       "destination":"Kashmere Gate",
+       "escore": 3.83
+    },
+    {"id":1,
+        "plate":"DL 3D 6069",
+         "source": "Noida",
+         "destination":"Shadara",
+         "escore": 2.28
+      },
+      {"id":1,
+        "plate":"DL 3D 6069",
+         "source": "Saket",
+         "destination":"Ghaziabad",
+         "escore": 4.5
+      },
+      {"id":1,
+        "plate":"DL 3D 6069",
+         "source": "Preet Vihar",
+         "destination":"Kashmere Gate",
+         "escore": 1.91
+      }
+]

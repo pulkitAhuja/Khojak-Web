@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <div class="logo"><img src="../../assets/green-energy.png"> Khojak Project</div>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/dashboard"  routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/vehicle" routerLinkActive="active">Vehicle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">{{username}}</a>
+          </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login" (click)="logout()"><i class="fas fa-user-circle"></i></a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<div class="dash">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-lg-3">
+          <div class="cards card">
+            <div class="meter">
+              <ngx-gauge [type]="gaugeType" [value]="gaugeValue" [size]="size" [thick]='thick' [max]='6'
+                [cap]="round">
+              </ngx-gauge>
+              <h4>Emission Meter</h4>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="col-lg-7 ">
+          <div class="card">
+            <div class="row main">
+              <div class="col-md-4 text-center">
+                <div class="circle"><i class="fas fa-rupee-sign"></i></div>
+                <h5>{{totalJour}} Trips</h5>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="circle two" ><i class="fas fa-check-double"></i></div>
+                <h5>{{points}} Points</h5>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="circle three">K</div>
+                <h5>45 Kms</h5>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    
+</div>
+<div class="dash">
+<div class="row">
+    <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <div *ngIf="points>50" class="cards card notif">
+    <h5>New Notification</h5>
+    <strong>Your Points are more than 100. Go ahead and redeem them! 
+      Also you can check your vehicle list. </strong>
+    <br>
+    <button class='btn btn-success'(click)="boolvehicle=!boolvehicle">Show Vehicle List</button>
+  </div>
+</div>
+
+<div class="col-md-7 ">
+    
+      <div class="card card-journey" *ngFor="let data_ of allJourney">
+          <div class="row"  >
+            <div class="col-md-8" style="color:green"><b>{{data_.source}} to {{data_.destination}}</b>
+              <p style="color:grey">Plate Number {{data_.plate}}</p>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2" style="color:green"><b>{{data_.escore}} </b><img class="im" src="../../assets/green-energy.png"></div>
+          </div>
+      </div>
+    
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+
+<div *ngIf="boolvehicle">
+    <h5>vehicle List</h5>
+    <div class="card" style="margin:25px;" *ngFor="let vehicle of vehicleList">
+        
+            <div class="row" >
+              <div class="col-md-8" style="color:green"><b>{{vehicle.types}}</b>
+                <p style="color:grey">Plate Number {{vehicle.plate}}</p>
+              </div>
+              <div class="col-md-2"></div>
+              <div class="col-md-2"style="color:green"><b>{{vehicle.model}} </b></div>
+            </div>
+        </div>
+</div>  
+
+</div>
+
+<div class="container">
+
+</div>

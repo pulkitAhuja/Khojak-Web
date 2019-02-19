@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(216, 250, 216);
+}
+.form-gr{
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-60%,-55%);
+    width: 400px;
+    text-align: center;
+    background: white;   
+    padding: 2%; 
+    box-shadow: rgb(190, 190, 190) 2px 2px 40px;
+}
+form{
+    text-align: center;
+    
+}
+input{
+    margin: 2.5% ;
+    width: 300px;
+    padding:5px;
+    font:8px;
+    border: 0;
+    outline: none !important;
+    border-bottom:0.2px solid green !important;
+}
+.inputs{
+    margin-bottom:8% ;
+}
+button{
+    width: 300px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+    box-shadow: rgb(190, 190, 190) 1px 1px 10px;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: rgb(136, 136, 136) 3px 3px 15px;
+}
+
+
+img{
+    width: 64px;
+    height: auto;
+    margin-bottom: 50px;
+}
+.signup{
+    background-color: rgb(78, 146, 61);
+}

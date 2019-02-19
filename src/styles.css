@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.card{
+    box-shadow: rgb(201, 201, 201) 2px 2px 15px;
+    margin: 25px 5px;
+}
+.active{
+    font-weight: bold;
+    color: rgb(0, 110, 33);
+}
