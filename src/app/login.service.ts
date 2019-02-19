@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class LoginService {
 
   constructor(private _http: HttpClient) { }
-  loginDone=false;
+  loginDone=true;
   getUser(): Observable<any>{
     // console.log(localStorage.getItem('access'));
     //  return this._http.get('http://192.168.43.142:8000/journey/details/',{headers: new HttpHeaders().set("Authorization", "Bearer " + localStorage.getItem('access'))});
